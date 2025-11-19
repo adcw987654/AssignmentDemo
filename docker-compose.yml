@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  amp_go_user_service:
+    ports:
+      - "8080:8080"
+    image: 610537428433.dkr.ecr.ap-northeast-1.amazonaws.com/ampgo-demo:latest
+    container_name: amp_go_user_service
+    environment:
+      - MAIL_PASSWORD=mpcv ydyi fijo xmrj
+    networks:
+      - gateway_network
+
+networks:
+  gateway_network:
+    driver: bridge
